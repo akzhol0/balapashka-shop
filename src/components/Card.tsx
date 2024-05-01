@@ -6,6 +6,7 @@ interface cartItemsProps {
   id: number;
   value: number;
   img: string;
+  quantity: number
 }
 
 interface cardProps {
@@ -21,21 +22,20 @@ interface cardProps {
 
 interface cardPropsProps {
   item: cardProps;
+  setTest: (arg0: boolean) => void;
+  test: boolean;
   addItemCart: (args0: cartItemsProps[]) => void;
 }
-let counter = 1;
 
-function Card({ item, addItemCart }: cardPropsProps) {
-  function foo() {
+function Card({ item, addItemCart, setTest, test }: cardPropsProps) {
+  function objAdder() {
     const cartItemPrep = [{
       name: item.name,
       value: item.value,
       img: item.img,
       id: item.id,
+      quantity: 1,
     }];
-
-    const LSObject = JSON.stringify(cartItemPrep)
-    localStorage.setItem(`cart${counter++}`, LSObject)
 
     addItemCart(cartItemPrep)
   }
@@ -44,10 +44,10 @@ function Card({ item, addItemCart }: cardPropsProps) {
     <div className="w-full min-h-[500px] flex flex-col rounded-xl overflow-hidden">
       <div className="card-img h-[350px] w-full relative overflow-hidden">
         <span
-          onClick={() => foo()}
+          onClick={() => objAdder()}
           className="absolute bg-white p-1.5 rounded-md bottom-1 right-1 cursor-pointer z-10"
         >
-          <CartIcon />
+          <button onClick={() => setTest(test ? false : true)}><CartIcon /></button>
         </span>
         <img
           className="w-full h-full object-cover object-center hover:scale-[1.1] duration-[.2s] z-2"

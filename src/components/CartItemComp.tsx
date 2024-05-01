@@ -5,14 +5,17 @@ interface PropsItem {
   id: number;
   value: number;
   img: string;
+  quantity: number;
 }
 
 interface cartItemProps {
   item: PropsItem;
   deleteItemCart: (arg0: number) => void;
+  test: boolean;
+  setTest: (arg0: boolean) => void;
 }
 
-function CartItemComp({ item, deleteItemCart }: cartItemProps) {
+function CartItemComp({ item, deleteItemCart, test, setTest }: cartItemProps) {
   return (
     <div className="w-full h-[100px] border-y flex justify-between items-center font-Alumni">
       <div className="flex">
@@ -24,15 +27,18 @@ function CartItemComp({ item, deleteItemCart }: cartItemProps) {
           />
         </div>
         <span className="flex flex-col ml-4 leading-[30px]">
-          <p className="overflow-hidden text-[25px]">{item.name}</p>
-          <p className="text-[30px]">{item.value}KZT</p>
+          <p className="w-full h-max-10px overflow-hidden text-[24px]">{item.name}</p>
+          <p className="text-[30px]">{item.value * item.quantity}KZT</p>
+          <p className="text-[20px]">Количество: {item.quantity}</p>
         </span>
       </div>
-      <div
-        onClick={() => deleteItemCart(item.id)}
-        className="w-[60px] h-[30px] bg-black text-white text-center text-xl cursor-pointer"
-      >
-        Delete
+      <div onClick={() => setTest(test ? false : true)}>
+        <button
+          onClick={() => deleteItemCart(item.id)}
+          className="w-[60px] h-[30px] bg-black text-white text-center text-xl cursor-pointer"
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

@@ -8,24 +8,28 @@ interface cartItemsProps {
   id: number;
   value: number;
   img: string;
+  quantity: number;
 }
 
 interface BurgerMenuCompProps {
   setClicked: (arg0: boolean) => void;
   deleteItemCart: (arg0: number) => void;
   cartItems: cartItemsProps[];
+  setTest: (arg0: boolean) => void;
+  test: boolean;
 }
 
 function BurgerMenuComp({
   setClicked,
   cartItems,
   deleteItemCart,
+  test,
+  setTest
 }: BurgerMenuCompProps) {
   const [burgerMenu, setBurgerMenu] = useState<Boolean>(false);
 
   let moneyCounted = 0;
-  cartItems.map((item) => (moneyCounted += item.value));
-
+  cartItems.map((item) => (moneyCounted += item.value * item.quantity));
   return (
     <div>
       <span
@@ -53,14 +57,18 @@ function BurgerMenuComp({
           </span>
         </div>
         <p className="text-center font-semibold text-2xl">Корзина</p>
-        <p className="text-center font-semibold text-xl">Итого: {moneyCounted} KZT</p>
-        <div className="flex flex-col gap-2 my-4">
+        <p className="text-center font-semibold text-xl">
+          Итого: {moneyCounted} KZT
+        </p>
+        <div className={test ? "flex flex-col gap-2 my-4" : "flex flex-col gap-2 my-4"}>
           {cartItems.length ? (
             cartItems.map((item) => (
               <CartItemComp
-                key={Math.random()}
+                key={Date.now()}
                 deleteItemCart={deleteItemCart}
                 item={item}
+                setTest={setTest}
+                test={test}
               />
             ))
           ) : (

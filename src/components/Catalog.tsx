@@ -23,26 +23,73 @@ function Catalog() {
     id: number;
     value: number;
     img: string;
+    quantity: number;
   }
 
   const [items, setItems] = useState<catalogCardProps[]>([]);
   const [cartItems, setCartItems] = useState<cartItemsProps[]>([]);
+  const [test, setTest] = useState<boolean>(true);
   const [clicked, setClicked] = useState<boolean>(false);
 
   function setItemsFunction(itemscb: catalogCardProps[]) {
     setItems(itemscb);
   }
 
+  function setCartItemsFromLocalStorage() {
+    let counter = 0;
+    for (let i = 1; i <= 135; i++) {
+      counter++;
+      const storedData = localStorage.getItem(`item${counter}`)
+      const myObject = storedData ? JSON.parse(storedData) : null;
+
+      if (myObject === null) {
+        console.log()
+      } else {
+        setCartItems(prev => [...prev, myObject])
+      }
+    }
+  } 
+
   function addItemCart(itemcb: cartItemsProps[]) {
-    setCartItems([...cartItems, itemcb[0]])
+    const cartItemsIds: number[] = [];
+    cartItems.map((item) => cartItemsIds.push(item.id))
+
+    if (cartItemsIds.includes(itemcb[0].id)) {
+      cartItems.map((item) => {
+        if (item.id === itemcb[0].id) {
+          item.quantity += 1;
+          const storedData = localStorage.getItem(`item${itemcb[0].id}`);
+          const myObject = storedData ? JSON.parse(storedData) : '';
+          myObject.quantity += 1;
+          localStorage.setItem(`item${itemcb[0].id}`, JSON.stringify(myObject))
+        }
+      })
+    } else {
+      localStorage.setItem(`item${itemcb[0].id}`, JSON.stringify(itemcb[0]))
+      setCartItems([...cartItems, itemcb[0]])
+    }
   }
 
   function deleteItemCart(itemId: number) {
-    setCartItems(cartItems.filter((item) => item.id !== itemId));
+    cartItems.map((item) => {
+      if (item.id === itemId) {
+        if (item.quantity > 1) {
+          item.quantity -= 1;
+          const storedData = localStorage.getItem(`item${item.id}`);
+          const myObject = storedData ? JSON.parse(storedData) : '';
+          myObject.quantity -= 1;
+          localStorage.setItem(`item${item.id}`, JSON.stringify(myObject))
+        } else {
+          setCartItems(cartItems.filter((item) => item.id !== itemId));
+          localStorage.removeItem(`item${item.id}`)
+        }
+      }
+    })
   }
 
   useEffect(() => {
     document.title = "Каталог";
+    setCartItemsFromLocalStorage()
   }, []);
 
   return (
@@ -56,6 +103,8 @@ function Catalog() {
                 deleteItemCart={deleteItemCart}
                 cartItems={cartItems}
                 setClicked={setClicked}
+                test={test} 
+                setTest={setTest}
               />
               {
                 <div
@@ -63,7 +112,7 @@ function Catalog() {
                   md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center"
                 >
                   {items.map((item) => (
-                    <Card addItemCart={addItemCart} key={item.id} item={item} />
+                    <Card test={test} setTest={setTest} addItemCart={addItemCart} key={item.id} item={item} />
                   ))}
                 </div>
               }
