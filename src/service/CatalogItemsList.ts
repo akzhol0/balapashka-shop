@@ -1,4 +1,4 @@
-const CatalogItemsList = [
+const database = [
   {
     name: "ШТАНЫ",
     catalogItemsList: [
@@ -1381,4 +1381,4 @@ const CatalogItemsList = [
   },
 ];
 
-export default CatalogItemsList;
+export default database;

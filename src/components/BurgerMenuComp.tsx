@@ -64,7 +64,7 @@ function BurgerMenuComp({
           {cartItems.length ? (
             cartItems.map((item) => (
               <CartItemComp
-                key={Date.now()}
+                key={item.id}
                 deleteItemCart={deleteItemCart}
                 item={item}
                 setTest={setTest}

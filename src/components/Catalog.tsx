@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import BurgerMenuComp from "./BurgerMenuComp";
 import Card from "./Card";
 import Footer from "./Footer";
-import CatalogItemsList from "../service/CatalogItemsList";
+import database from "../service/CatalogItemsList";
 
 function Catalog() {
   interface catalogCardProps {
@@ -36,15 +36,11 @@ function Catalog() {
   }
 
   function setCartItemsFromLocalStorage() {
-    let counter = 0;
     for (let i = 1; i <= 135; i++) {
-      counter++;
-      const storedData = localStorage.getItem(`item${counter}`)
+      const storedData = localStorage.getItem(`item${i}`)
       const myObject = storedData ? JSON.parse(storedData) : null;
 
-      if (myObject === null) {
-        console.log()
-      } else {
+      if (myObject === null) {} else {
         setCartItems(prev => [...prev, myObject])
       }
     }
@@ -126,7 +122,7 @@ function Catalog() {
             <p className="text-5xl sm:text-8xl mt-[50px]">Каталог</p>
             <p className="text-xl">Главная страница - Каталог</p>
             <div className="w-full h-[800px] md:h-[1000px] lg:h-[300px] grid grid-cols-2 lg:grid-cols-5 gap-[15px] my-[70px]">
-              {CatalogItemsList.map((item) => (
+              {database.map((item) => (
                 <CatalogItem
                   key={item.name}
                   catalogItems={item.catalogItemsList}
