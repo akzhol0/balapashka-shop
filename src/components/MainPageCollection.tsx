@@ -1,14 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface MainPageCollectionProps {
-  sizeFrom: string;
-  sizeTo: string;
-  urlName: string;
-  price: string;
-  firstImage: string;
-  secondImage: string;
-}
+import { MainPageCollectionProps } from "../service/types";
 
 function MainPageCollection({
   sizeFrom,

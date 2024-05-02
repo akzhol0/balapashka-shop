@@ -16,3 +16,16 @@ export interface cartItemsProps {
   img: string;
   quantity: number;
 }
+
+export interface MainPageCollectionProps {
+  sizeFrom: string;
+  sizeTo: string;
+  urlName: string;
+  price: string;
+  firstImage: string;
+  secondImage: string;
+}
+
+export interface HeaderProps {
+  backgroundOnOff: boolean;
+}

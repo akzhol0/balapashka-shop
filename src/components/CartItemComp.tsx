@@ -1,15 +1,8 @@
 import React from "react";
-
-interface PropsItem {
-  name: string;
-  id: number;
-  value: number;
-  img: string;
-  quantity: number;
-}
+import { cartItemsProps } from "../service/types";
 
 interface cartItemProps {
-  item: PropsItem;
+  item: cartItemsProps;
   deleteItemCart: (arg0: number) => void;
   test: boolean;
   setTest: (arg0: boolean) => void;

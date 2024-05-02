@@ -1,21 +1,11 @@
 import React from "react";
-
-interface catalogItemsProps {
-  id: number;
-  value: number;
-  name: string;
-  stock: string;
-  price: string;
-  priceBottom: string;
-  size: string;
-  img: string;
-}
+import { catalogCardProps } from "../service/types";
 
 interface ItemProps {
   setClicked: (arg0: boolean) => void;
-  setItemsFunction: (arg0: catalogItemsProps[]) => void;
+  setItemsFunction: (arg0: catalogCardProps[]) => void;
   name: string;
-  catalogItems: catalogItemsProps[];
+  catalogItems: catalogCardProps[];
 }
 
 function CatalogItem({ name, setClicked, catalogItems, setItemsFunction }: ItemProps) {

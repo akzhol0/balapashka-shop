@@ -1,27 +1,9 @@
 import React from "react";
 import CartIcon from "./UI/MyIcons/CartIcon";
-
-interface cartItemsProps {
-  name: string;
-  id: number;
-  value: number;
-  img: string;
-  quantity: number
-}
-
-interface cardProps {
-  id: number;
-  value: number;
-  name: string;
-  stock: string;
-  price: string;
-  priceBottom: string;
-  size: string;
-  img: string;
-}
+import { catalogCardProps, cartItemsProps } from "../service/types";
 
 interface cardPropsProps {
-  item: cardProps;
+  item: catalogCardProps;
   setTest: (arg0: boolean) => void;
   test: boolean;
   addItemCart: (args0: cartItemsProps[]) => void;
@@ -36,7 +18,6 @@ function Card({ item, addItemCart, setTest, test }: cardPropsProps) {
       id: item.id,
       quantity: 1,
     }];
-
     addItemCart(cartItemPrep)
   }
 

@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import InstagramIcon from "./UI/MyIcons/InstagramIcon";
 import WhatsappIcon from "./UI/MyIcons/WhatsappIcon";
 import { click } from "@testing-library/user-event/dist/click";
-
-interface HeaderProps {
-  backgroundOnOff: boolean;
-}
+import { HeaderProps } from "../service/types";
 
 function Header({ backgroundOnOff }: HeaderProps) {
   return (

@@ -2,14 +2,7 @@ import React, { useEffect, useState } from "react";
 import BurgerMenu from "./UI/MyIcons/BurgerMenu";
 import CloseBurgerBtn from "./UI/MyIcons/CloseBurgerBtn";
 import CartItemComp from "./CartItemComp";
-
-interface cartItemsProps {
-  name: string;
-  id: number;
-  value: number;
-  img: string;
-  quantity: number;
-}
+import { cartItemsProps } from "../service/types";
 
 interface BurgerMenuCompProps {
   setClicked: (arg0: boolean) => void;

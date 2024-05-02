@@ -5,27 +5,9 @@ import BurgerMenuComp from "./BurgerMenuComp";
 import Card from "./Card";
 import Footer from "./Footer";
 import database from "../service/CatalogItemsList";
+import { catalogCardProps, cartItemsProps } from "../service/types";
 
 function Catalog() {
-  interface catalogCardProps {
-    id: number;
-    value: number;
-    name: string;
-    stock: string;
-    price: string;
-    priceBottom: string;
-    size: string;
-    img: string;
-  }
-
-  interface cartItemsProps {
-    name: string;
-    id: number;
-    value: number;
-    img: string;
-    quantity: number;
-  }
-
   const [items, setItems] = useState<catalogCardProps[]>([]);
   const [cartItems, setCartItems] = useState<cartItemsProps[]>([]);
   const [test, setTest] = useState<boolean>(true);
