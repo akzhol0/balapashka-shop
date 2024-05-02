@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { catalogCardProps } from "../service/types";
+import { contextData } from "../context";
 
 interface ItemProps {
   setClicked: (arg0: boolean) => void;
-  setItemsFunction: (arg0: catalogCardProps[]) => void;
   name: string;
   catalogItems: catalogCardProps[];
 }
 
-function CatalogItem({ name, setClicked, catalogItems, setItemsFunction }: ItemProps) {
+function CatalogItem({ name, setClicked, catalogItems }: ItemProps) {
+  const {setItemsFunction} = useContext(contextData);
+
   function foo() {
     setClicked(true);
     setItemsFunction(catalogItems)

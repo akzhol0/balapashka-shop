@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartIcon from "./UI/MyIcons/CartIcon";
 import { catalogCardProps, cartItemsProps } from "../service/types";
+import { contextData } from "../context";
 
 interface cardPropsProps {
   item: catalogCardProps;
   setTest: (arg0: boolean) => void;
   test: boolean;
-  addItemCart: (args0: cartItemsProps[]) => void;
 }
 
-function Card({ item, addItemCart, setTest, test }: cardPropsProps) {
+function Card({ item, setTest, test }: cardPropsProps) {
+  const {addItemCart} = useContext(contextData)
+
   function objAdder() {
     const cartItemPrep = [{
       name: item.name,

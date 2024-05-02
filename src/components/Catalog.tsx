@@ -1,73 +1,21 @@
 import Header from "./Header";
 import CatalogItem from "./CatalogItem";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BurgerMenuComp from "./BurgerMenuComp";
 import Card from "./Card";
 import Footer from "./Footer";
-import database from "../service/CatalogItemsList";
-import { catalogCardProps, cartItemsProps } from "../service/types";
+import database from "../service/database";
+import { catalogCardProps } from "../service/types";
+import { contextData } from "../context";
 
 function Catalog() {
-  const [items, setItems] = useState<catalogCardProps[]>([]);
-  const [cartItems, setCartItems] = useState<cartItemsProps[]>([]);
   const [test, setTest] = useState<boolean>(true);
   const [clicked, setClicked] = useState<boolean>(false);
-
-  function setItemsFunction(itemscb: catalogCardProps[]) {
-    setItems(itemscb);
-  }
-
-  function setCartItemsFromLocalStorage() {
-    for (let i = 1; i <= 135; i++) {
-      const storedData = localStorage.getItem(`item${i}`)
-      const myObject = storedData ? JSON.parse(storedData) : null;
-
-      if (myObject === null) {} else {
-        setCartItems(prev => [...prev, myObject])
-      }
-    }
-  } 
-
-  function addItemCart(itemcb: cartItemsProps[]) {
-    const cartItemsIds: number[] = [];
-    cartItems.map((item) => cartItemsIds.push(item.id))
-
-    if (cartItemsIds.includes(itemcb[0].id)) {
-      cartItems.map((item) => {
-        if (item.id === itemcb[0].id) {
-          item.quantity += 1;
-          const storedData = localStorage.getItem(`item${itemcb[0].id}`);
-          const myObject = storedData ? JSON.parse(storedData) : '';
-          myObject.quantity += 1;
-          localStorage.setItem(`item${itemcb[0].id}`, JSON.stringify(myObject))
-        }
-      })
-    } else {
-      localStorage.setItem(`item${itemcb[0].id}`, JSON.stringify(itemcb[0]))
-      setCartItems([...cartItems, itemcb[0]])
-    }
-  }
-
-  function deleteItemCart(itemId: number) {
-    cartItems.map((item) => {
-      if (item.id === itemId) {
-        if (item.quantity > 1) {
-          item.quantity -= 1;
-          const storedData = localStorage.getItem(`item${item.id}`);
-          const myObject = storedData ? JSON.parse(storedData) : '';
-          myObject.quantity -= 1;
-          localStorage.setItem(`item${item.id}`, JSON.stringify(myObject))
-        } else {
-          setCartItems(cartItems.filter((item) => item.id !== itemId));
-          localStorage.removeItem(`item${item.id}`)
-        }
-      }
-    })
-  }
+  const { items, cartItems, setCartItemsFromLocalStorage } = useContext(contextData);
 
   useEffect(() => {
     document.title = "Каталог";
-    setCartItemsFromLocalStorage()
+    setCartItemsFromLocalStorage();
   }, []);
 
   return (
@@ -78,10 +26,9 @@ function Catalog() {
           <main className="w-full bg-[#1b1b1b]">
             <div className="flex flex-col justify-center items-center relative">
               <BurgerMenuComp
-                deleteItemCart={deleteItemCart}
                 cartItems={cartItems}
                 setClicked={setClicked}
-                test={test} 
+                test={test}
                 setTest={setTest}
               />
               {
@@ -89,8 +36,13 @@ function Catalog() {
                   className="w-[100%] xl:w-[90%] 2xl:w-[80%] px-5 xl:px-0 mt-20 mb-10 h-auto grid grid-cols-1 sm:grid-cols-2 
                   md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center"
                 >
-                  {items.map((item) => (
-                    <Card test={test} setTest={setTest} addItemCart={addItemCart} key={item.id} item={item} />
+                  {items.map((item: catalogCardProps) => (
+                    <Card
+                      test={test}
+                      setTest={setTest}
+                      key={item.id}
+                      item={item}
+                    />
                   ))}
                 </div>
               }
@@ -110,7 +62,6 @@ function Catalog() {
                   catalogItems={item.catalogItemsList}
                   setClicked={setClicked}
                   name={item.name}
-                  setItemsFunction={setItemsFunction}
                 />
               ))}
             </div>
@@ -122,4 +73,3 @@ function Catalog() {
 }
 
 export default Catalog;
-

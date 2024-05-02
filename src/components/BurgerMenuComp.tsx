@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import BurgerMenu from "./UI/MyIcons/BurgerMenu";
 import CloseBurgerBtn from "./UI/MyIcons/CloseBurgerBtn";
 import CartItemComp from "./CartItemComp";
 import { cartItemsProps } from "../service/types";
+import { contextData } from "../context";
 
 interface BurgerMenuCompProps {
   setClicked: (arg0: boolean) => void;
-  deleteItemCart: (arg0: number) => void;
   cartItems: cartItemsProps[];
   setTest: (arg0: boolean) => void;
   test: boolean;
@@ -15,10 +15,10 @@ interface BurgerMenuCompProps {
 function BurgerMenuComp({
   setClicked,
   cartItems,
-  deleteItemCart,
   test,
   setTest
 }: BurgerMenuCompProps) {
+  const {deleteItemCart} = useContext(contextData);
   const [burgerMenu, setBurgerMenu] = useState<Boolean>(false);
 
   let moneyCounted = 0;
