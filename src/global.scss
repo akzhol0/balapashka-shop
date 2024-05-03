@@ -30,6 +30,6 @@ body, html {
         @apply w-[350px] h-dvh bg-[#ff994b] fixed top-0 z-10 duration-[.4s];
     }
     .too-long {
-        @apply w-[100%] h-[500px] xl:w-[90%] 2xl:w-[80%] px-5 xl:px-0 mt-5 mb-10 h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center
+        @apply w-[100%] h-[500px] xl:w-[90%] 2xl:w-[80%] px-5 xl:px-0 mt-5 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center
     }
   }
