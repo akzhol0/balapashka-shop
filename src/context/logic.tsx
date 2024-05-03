@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { ItemProps, CatalogItemProps } from "../service/types";
+import database from "../service/database";
 
 type yaNeEbyChtoEto = {
   map(arg0: (item: CatalogItemProps) => import("react/jsx-runtime").JSX.Element): React.ReactNode;
@@ -15,6 +16,7 @@ type ContextProps = {
   deleteItemCart: (itemId: number) => void;
   limitItemsFunc: (moneyLimit: number) => void;
   searchItemsFunc: (filteredByLimitItems: any, searchInput: string) => yaNeEbyChtoEto;
+  getItem: (id: string | undefined, category: string | undefined, setItem: (arg0: CatalogItemProps) => void) => void;
 };
 export const contextData = createContext({} as ContextProps);
 
@@ -93,6 +95,18 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
     return filtered;
   }
 
+  function getItem(id: string | undefined, category: string | undefined, setItem: (arg0: CatalogItemProps) => void) {
+    database.map((item) => {
+      if (item.name == category?.toUpperCase()) {
+        item.catalogItemsList.map((item) => {
+          if (Number(id) === item.id) {
+            setItem(item)
+          }
+        })
+      }
+    })
+  }
+
   return (
     <contextData.Provider
       value={{
@@ -103,7 +117,8 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
         addItemCart,
         deleteItemCart,
         limitItemsFunc,
-        searchItemsFunc
+        searchItemsFunc,
+        getItem,
       }}
     >
       {children}

@@ -3,7 +3,7 @@ import BurgerMenuComp from "./BurgerMenuComp";
 import { CatalogItemProps } from "../service/types";
 import Card from "./Card";
 import Footer from "./Footer";
-import { contextData } from "../context";
+import { contextData } from "../context/logic";
 import Options from "./Options";
 
 type PageItemsProps = {

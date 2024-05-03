@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CatalogItemProps } from "../service/types";
-import { contextData } from "../context";
+import { contextData } from "../context/logic";
 
 interface ItemProps {
   setClicked: (arg0: boolean) => void;

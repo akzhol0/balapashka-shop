@@ -3,7 +3,7 @@ import BurgerMenu from "./UI/MyIcons/BurgerMenu";
 import CloseBurgerBtn from "./UI/MyIcons/CloseBurgerBtn";
 import CartItemComp from "./CartItemComp";
 import { ItemProps } from "../service/types";
-import { contextData } from "../context";
+import { contextData } from "../context/logic";
 
 interface BurgerMenuCompProps {
   setClicked: (arg0: boolean) => void;

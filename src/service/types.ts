@@ -1,4 +1,4 @@
-export interface CatalogItemProps {
+export type CatalogItemProps = {
   id: number;
   value: number;
   name: string;
@@ -7,17 +7,19 @@ export interface CatalogItemProps {
   priceBottom: string;
   size: string;
   img: string;
+  category: string;
 }
 
-export interface ItemProps {
+export type ItemProps = {
   name: string;
   id: number;
   value: number;
   img: string;
   quantity: number;
+  category: string;
 }
 
-export interface MainPageCollectionProps {
+export type MainPageCollectionProps = {
   sizeFrom: string;
   sizeTo: string;
   urlName: string;
@@ -26,6 +28,6 @@ export interface MainPageCollectionProps {
   secondImage: string;
 }
 
-export interface HeaderProps {
+export type HeaderProps = {
   backgroundOnOff: boolean;
 }

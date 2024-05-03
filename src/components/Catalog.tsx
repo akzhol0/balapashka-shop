@@ -1,6 +1,6 @@
 import Header from "./Header";
 import { useContext, useEffect, useState } from "react";
-import { contextData } from "../context";
+import { contextData } from "../context/logic";
 import PageItems from "./PageItems";
 import CatalogItems from "./CatalogItems";
 

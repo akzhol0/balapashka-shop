@@ -11,6 +11,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany1.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 2,
@@ -21,6 +22,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany2.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 3,
@@ -31,6 +33,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany3.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 4,
@@ -41,6 +44,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany4.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 5,
@@ -51,6 +55,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany5.jpeg",
+        category: 'ШТАНЫ'
       },
       {
         id: 6,
@@ -61,6 +66,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany6.jpeg",
+        category: 'ШТАНЫ'
       },
       {
         id: 7,
@@ -71,6 +77,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany7.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 8,
@@ -81,6 +88,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany8.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 9,
@@ -91,6 +99,7 @@ const database = [
         priceBottom: " 3.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany9.jpeg",
+        category: 'ШТАНЫ'
       },
       {
         id: 10,
@@ -101,6 +110,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany10.jpeg",
+        category: 'ШТАНЫ'
       },
       {
         id: 11,
@@ -111,6 +121,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany11.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 12,
@@ -121,6 +132,7 @@ const database = [
         priceBottom: " 3.300KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany12.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 13,
@@ -131,6 +143,7 @@ const database = [
         priceBottom: " 3.300KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany13.jpeg",
+        category: 'ШТАНЫ'
       },
       {
         id: 14,
@@ -141,6 +154,7 @@ const database = [
         priceBottom: " 2.400KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany14.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 15,
@@ -151,6 +165,7 @@ const database = [
         priceBottom: " 2.900KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес)",
         img: "/images/wtany/wtany15.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 16,
@@ -161,6 +176,7 @@ const database = [
         priceBottom: " 2.400KZT",
         size: "Размеры: 74см(6-9.мес), 80см(9-12.мес), 86см(12-18.мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany16.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 17,
@@ -171,6 +187,7 @@ const database = [
         priceBottom: " 3.400KZT",
         size: "Размеры: 74см(6-9.мес), 80см(9-12.мес),  86см(12-18.мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany17.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 18,
@@ -181,6 +198,7 @@ const database = [
         priceBottom: " 3.400KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес)",
         img: "/images/wtany/wtany18.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 19,
@@ -191,6 +209,7 @@ const database = [
         priceBottom: " 3.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany19.jpeg",
+        category: "ШТАНЫ",
       },
       {
         id: 20,
@@ -201,6 +220,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         img: "/images/wtany/wtany20.jpeg",
+        category: "ШТАНЫ",
       },
     ],
   },
@@ -216,6 +236,7 @@ const database = [
         priceBottom: " 4.200KZT",
         size: "Размеры: 68см(3-6.мес), 74см(6-9.мес), 80см(12.мес), 86см(18.мес)",
         value: 3800,
+        category: "КОФТЫ",
       },
       {
         id: 22,
@@ -226,6 +247,7 @@ const database = [
         priceBottom: " 4.200KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         value: 3800,
+        category: "КОФТЫ",
       },
       {
         id: 23,
@@ -236,6 +258,7 @@ const database = [
         priceBottom: " 4.200KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         value: 3800,
+        category: "КОФТЫ",
       },
       {
         id: 24,
@@ -246,6 +269,7 @@ const database = [
         priceBottom: " 4.200KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         value: 3800,
+        category: "КОФТЫ",
       },
       {
         id: 25,
@@ -256,6 +280,7 @@ const database = [
         priceBottom: " 4.200KZT",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес),  80 см (9-12 мес), 86 см (12-18 мес)",
         value: 3800,
+        category: "КОФТЫ",
       },
       {
         id: 26,
@@ -266,6 +291,7 @@ const database = [
         priceBottom: " 4.200KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         value: 3800,
+        category: "КОФТЫ",
       },
       {
         id: 27,
@@ -276,6 +302,7 @@ const database = [
         priceBottom: " 2.000KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         value: 1500,
+        category: "КОФТЫ",
       },
       {
         id: 28,
@@ -286,6 +313,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         value: 2000,
+        category: "КОФТЫ",
       },
       {
         id: 29,
@@ -296,6 +324,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
         value: 4000,
+        category: "КОФТЫ",
       },
       {
         id: 30,
@@ -306,6 +335,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         value: 4000,
+        category: "КОФТЫ",
       },
       {
         id: 31,
@@ -316,6 +346,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
         value: 2000,
+        category: "КОФТЫ",
       },
       {
         id: 32,
@@ -326,6 +357,7 @@ const database = [
         priceBottom: " 2.600KZT",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
         value: 2000,
+        category: "КОФТЫ",
       },
       {
         id: 33,
@@ -336,6 +368,7 @@ const database = [
         priceBottom: " 2.400KZT",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
         value: 2000,
+        category: "КОФТЫ",
       },
     ],
   },
@@ -351,6 +384,7 @@ const database = [
         img: "/images/nabor/nabor1.jpeg",
         priceBottom: " 4.800KZT",
         size: "Размеры: 56 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 35,
@@ -361,6 +395,7 @@ const database = [
         img: "/images/nabor/nabor2.jpeg",
         priceBottom: " 4.200KZT",
         size: "Размеры:68 см (3-6 мес), 74 см (6-9 мес), 86 см (12-18 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 36,
@@ -371,6 +406,7 @@ const database = [
         img: "/images/nabor/nabor3.jpeg",
         priceBottom: " 3.700KZT",
         size: "Размеры: 62 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 37,
@@ -381,6 +417,7 @@ const database = [
         img: "/images/nabor/nabor4.jpeg",
         priceBottom: " 3.700KZT",
         size: "Размеры: 62 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 38,
@@ -391,6 +428,7 @@ const database = [
         img: "/images/nabor/nabor5.jpeg",
         priceBottom: " 3.700KZT",
         size: "Размеры: 62 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 39,
@@ -401,6 +439,7 @@ const database = [
         img: "/images/nabor/nabor6.jpeg",
         priceBottom: " 3.700KZT",
         size: "Размеры: 62 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 40,
@@ -411,6 +450,7 @@ const database = [
         img: "/images/nabor/nabor7.jpeg",
         priceBottom: " 6.000KZT",
         size: "Размеры: 50-56 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 41,
@@ -421,6 +461,7 @@ const database = [
         img: "/images/nabor/nabor8.jpeg",
         priceBottom: " 4.800KZT",
         size: "Размеры: 62 см (0-3 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 42,
@@ -431,6 +472,7 @@ const database = [
         img: "/images/nabor/nabor9.jpeg",
         priceBottom: " 4.600KZT",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 43,
@@ -441,6 +483,7 @@ const database = [
         img: "/images/nabor/nabor10.jpeg",
         priceBottom: " 4.200KZT",
         size: "Размеры: 68см(3-6.мес), 74см(6-9.мес), 80см(12.мес), 86см(18.мес)",
+        category: "НАБОРЫ",
       },
       {
         id: 44,
@@ -451,6 +494,7 @@ const database = [
         img: "/images/nabor/nabor11.jpeg",
         priceBottom: " 4.600KZT",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "НАБОРЫ",
       },
     ],
   },
@@ -466,6 +510,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: S (0-12 мес)",
         value: 4000,
+        category: "МАТРАСЫ",
       },
       {
         id: 46,
@@ -476,6 +521,7 @@ const database = [
         priceBottom: " 4.600KZT",
         size: "Размеры: S (0-12 мес)",
         value: 4000,
+        category: "МАТРАСЫ",
       },
     ],
   },
@@ -491,6 +537,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap1.jpg",
         size: "В Наличий: 7 штук, в разных расцветках",
+        category: "ШАПКИ",
       },
       {
         id: 48,
@@ -501,6 +548,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap2.jpeg",
         size: "Размеры: 0-6 мес",
+        category: "ШАПКИ",
       },
       {
         id: 49,
@@ -511,6 +559,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap3.jpg",
         size: "",
+        category: "ШАПКИ",
       },
       {
         id: 50,
@@ -521,6 +570,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap4.jpeg",
         size: "Есть в 3х расцветках",
+        category: "ШАПКИ",
       },
       {
         id: 51,
@@ -531,6 +581,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap5.jpeg",
         size: "В наличий в разных расцетках",
+        category: "ШАПКИ",
       },
       {
         id: 52,
@@ -541,6 +592,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap6.jpeg",
         size: "В наличий в разных расцетках",
+        category: "ШАПКИ",
       },
       {
         id: 53,
@@ -551,6 +603,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap7.jpeg",
         size: "",
+        category: "ШАПКИ",
       },
       {
         id: 54,
@@ -561,6 +614,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/wapki/wap8.jpeg",
         size: "",
+        category: "ШАПКИ",
       },
     ],
   },
@@ -576,6 +630,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip1.jpeg",
         size: "Размеры: 56 см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 56,
@@ -586,6 +641,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip2.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 57,
@@ -596,6 +652,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip3.jpeg",
         size: "Размеры: 56 см (0-2 мес), 62 см (0-3 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 58,
@@ -606,6 +663,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip4.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 59,
@@ -616,6 +674,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip5.jpeg",
         size: "Размеры: 62 см (0-3 мес)х2",
+        category: "СЛИПИКИ",
       },
       {
         id: 60,
@@ -626,6 +685,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip6.jpeg",
         size: "Размеры: 56 см (0-2 мес), 62 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 61,
@@ -636,6 +696,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip7.jpeg",
         size: "Размеры: 56 см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 62,
@@ -646,6 +707,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip8.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 63,
@@ -656,6 +718,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip9.jpeg",
         size: "Размеры: 56 см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 64,
@@ -666,6 +729,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip10.jpeg",
         size: "Размеры: 44 см (0-1 мес), 50 см (0-1 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 65,
@@ -676,6 +740,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip11.jpeg",
         size: "Размеры: 44 см (0-1 мес), 50 см (0-1 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 66,
@@ -686,6 +751,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip12.jpeg",
         size: "Размеры: 62 см (3 мес), 68 см (6 мес), 74 см (9 мес), 80 см (12 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 67,
@@ -696,6 +762,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip13.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 68,
@@ -706,6 +773,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip14.jpeg",
         size: "Размеры: 68 см (6 мес), 74 см (9 мес), 80 см (12 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 69,
@@ -716,6 +784,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip15.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес),  86 см (12-18 мес), 92 см (18-24 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 70,
@@ -726,6 +795,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip16.jpeg",
         size: "Размеры: 56 см (0-2 мес) 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 71,
@@ -736,6 +806,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip17.jpeg",
         size: "Размеры: 62 см (0-3 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 72,
@@ -746,6 +817,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip18.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 73,
@@ -756,6 +828,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip19.jpeg",
         size: "Размеры: 56 см (0-2мес), 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 74,
@@ -766,6 +839,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip20.jpeg",
         size: "Размеры: 56см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 75,
@@ -776,6 +850,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip21.jpeg",
         size: "Размеры: 56см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 76,
@@ -786,6 +861,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip22.jpeg",
         size: "Размеры: 62 см (3 мес), 68 см (6 мес), 74 см (9 мес), 80 см (12 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 77,
@@ -795,6 +871,7 @@ const database = [
         priceBottom: " 4.200KZT",
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip23.jpeg",
+        category: "СЛИПИКИ",
         size: "Размеры: Белый: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес) Зеленый: 62 см (0-3 мес), 74 см (6-9 мес) Розовый: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
       },
       {
@@ -806,6 +883,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip24.jpeg",
         size: "Размеры: 74 см (9 мес), 80 см (12 мес), 86 см (18 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 79,
@@ -816,6 +894,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip25.jpeg",
         size: "Размеры: 56 см (0-2 мес) 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 80,
@@ -826,6 +905,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip26.jpeg",
         size: "Размеры: 56см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 81,
@@ -836,6 +916,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip27.jpeg",
         size: "Размеры: Желтый: 56 см (0-2 мес), Красный: 56 см (0-2 мес), 68 см (3-6 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 82,
@@ -846,6 +927,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip28.jpeg",
         size: "Размеры: 44 см (0-1 мес), 50 см (0-1 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 83,
@@ -856,6 +938,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip29.jpeg",
         size: "Размеры: 44 см (0-1 мес), 50 см (0-1 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 84,
@@ -866,6 +949,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip30.jpeg",
         size: "Размеры: 56 см (0-3 мес) 62 см (3 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 85,
@@ -876,6 +960,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip31.jpeg",
         size: "Размеры: 56см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
       {
         id: 86,
@@ -886,6 +971,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/slip/slip14.jpeg",
         size: "Размеры: 56см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "СЛИПИКИ",
       },
     ],
   },
@@ -901,6 +987,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik1.jpeg",
         size: "Размеры: Размеры:62 см (3 мес), 68 см (6 мес), 74 см (9 мес), 80 см (12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 88,
@@ -911,6 +998,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik2.jpeg",
         size: "Размеры:62 см (3 мес), 68 см (6 мес), 74 см (9 мес),",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 89,
@@ -921,6 +1009,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik3.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 90,
@@ -931,6 +1020,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik4.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 91,
@@ -941,6 +1031,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik5.jpeg",
         size: "Размеры:68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 92,
@@ -951,6 +1042,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik6.jpeg",
         size: "Размеры: 62 см (0-3 см), 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 93,
@@ -961,6 +1053,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik7.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 94,
@@ -971,6 +1064,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik8.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 95,
@@ -981,6 +1075,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik9.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 80 см (12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 96,
@@ -991,6 +1086,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik10.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес),80 см (9-12 мес))",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 97,
@@ -1001,6 +1097,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik11.jpeg",
         size: "Размеры: 56 см (0-2 мес), 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 98,
@@ -1011,6 +1108,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik12.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 99,
@@ -1021,6 +1119,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik13.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 100,
@@ -1031,6 +1130,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik14.jpeg",
         size: "Размеры: 68 см (3-6 мес), 80 см (12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 101,
@@ -1041,6 +1141,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik15.jpeg",
         size: "Размеры: 68 см (3-6 мес), 80 см (12 мес)",
+        category: "КОМПЛЕКТЫ",
       },
       {
         id: 102,
@@ -1051,6 +1152,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/komb/kombik16.jpeg",
         size: "Размеры: 62 см (0-3 мес), 68 см (3-6 мес), 74 см (6-9 мес)",
+        category: "КОМПЛЕКТЫ",
       },
     ],
   },
@@ -1066,6 +1168,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/pijama/pijama1.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
+        category: "ПИЖАМЫ",
       },
       {
         id: 104,
@@ -1075,6 +1178,7 @@ const database = [
         priceBottom: " 4.200KZT",
         stock: "● В НАЛИЧИЙ",
         img: "/images/pijama/pijama2.jpeg",
+        category: "ПИЖАМЫ",
         size: "Размеры:68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес)",
       },
       {
@@ -1086,6 +1190,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/pijama/pijama3.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес)",
+        category: "ПИЖАМЫ",
       },
     ],
   },
@@ -1101,6 +1206,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/platbe/plat1.jpeg",
         size: "Размеры: 74см(6-9.мес),80см(9-12.мес)",
+        category: "ПЛАТЬЯ",
       },
       {
         id: 107,
@@ -1111,6 +1217,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/platbe/plat2.jpeg",
         size: "Размеры:74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 92 см (18-24 мес)",
+        category: "ПЛАТЬЯ",
       },
       {
         id: 108,
@@ -1121,6 +1228,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/platbe/plat3.jpeg",
         size: "Размеры: 74см(6-9.мес),80см(9-12.мес)",
+        category: "ПЛАТЬЯ",
       },
       {
         id: 109,
@@ -1131,6 +1239,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/platbe/plat4.jpeg",
         size: "Размеры:68 см (6-9 мес), 74 см (9-12 мес),  80 см (12-18 мес), 86 см (18-24 мес)",
+        category: "ПЛАТЬЯ",
       },
     ],
   },
@@ -1146,6 +1255,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp1.jpeg",
         size: "Размеры: 74 см (6-9 мес), 86см (12-18 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 111,
@@ -1156,6 +1266,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp2.jpeg",
         size: "Размеры: 74 см (6-9 мес), 86 см (9-12 мес), 92 см (18-24 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 112,
@@ -1166,6 +1277,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp3.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 113,
@@ -1176,6 +1288,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp4.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес), 96 см (24-36 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 114,
@@ -1186,6 +1299,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp5.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 86 см (12-18 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 115,
@@ -1196,6 +1310,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp6.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 116,
@@ -1206,6 +1321,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp7.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес),86 см (12-18 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 117,
@@ -1216,6 +1332,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp8.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 118,
@@ -1225,6 +1342,7 @@ const database = [
         priceBottom: " 4.600KZT",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp9.jpeg",
+        category: "КОМБИНЕЗОНЫ",
         size: "Размеры: 74 см (9 мес), 80 см (12 мес),86 см (18 мес)",
       },
       {
@@ -1236,6 +1354,7 @@ const database = [
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp10.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
+        category: "КОМБИНЕЗОНЫ",
       },
       {
         id: 120,
@@ -1244,6 +1363,7 @@ const database = [
         price: "4.000KZT",
         priceBottom: " 4.600KZT",
         stock: "● В НАЛИЧИЙ",
+        category: "КОМБИНЕЗОНЫ",
         img: "/images/kompl/komp11.jpeg",
         size: "Размеры: 74 см (9 мес), 80 см (12 мес)",
       },
@@ -1254,6 +1374,7 @@ const database = [
         price: "4.000KZT",
         priceBottom: " 4.600KZT",
         stock: "● В НАЛИЧИЙ",
+        category: "КОМБИНЕЗОНЫ",
         img: "/images/kompl/komp12.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес)",
       },
@@ -1262,6 +1383,7 @@ const database = [
         name: "ДВОЙКА",
         value: 5000,
         price: "5.000KZT",
+        category: "КОМБИНЕЗОНЫ",
         priceBottom: " 5.600KZT",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp13.jpeg",
@@ -1273,6 +1395,7 @@ const database = [
         value: 4200,
         price: "4.200KZT",
         priceBottom: " 4.800KZT",
+        category: "КОМБИНЕЗОНЫ",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp14.jpeg",
         size: "Размеры:  68 см (3-6 мес), 74 см (6-9 мес)",
@@ -1283,6 +1406,7 @@ const database = [
         value: 4300,
         price: "4.300KZT",
         priceBottom: " 4.800KZT",
+        category: "КОМБИНЕЗОНЫ",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp15.jpeg",
         size: "Размеры: 68 см (6 мес), 80 см (12 мес), 86 см (18 мес)",
@@ -1293,6 +1417,7 @@ const database = [
         value: 4000,
         price: "4.000KZT",
         priceBottom: " 4.600KZT",
+        category: "КОМБИНЕЗОНЫ",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp16.jpeg",
         size: "Размеры: 74 см (6-9 мес)",
@@ -1303,6 +1428,7 @@ const database = [
         value: 4300,
         price: "4.300KZT",
         priceBottom: " 4.800KZT",
+        category: "КОМБИНЕЗОНЫ",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp17.jpeg",
         size: "Размеры: 68 см (6 мес), 74 см (9 мес), 80 см (12 мес),86 см (18 мес)",
@@ -1313,6 +1439,7 @@ const database = [
         value: 4000,
         price: "4.000KZT",
         priceBottom: " 4.200KZT",
+        category: "КОМБИНЕЗОНЫ",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp18.jpeg",
         size: "Размеры: 74 см (6-9 мес)",
@@ -1324,6 +1451,7 @@ const database = [
         price: "4.000KZT",
         priceBottom: " 4.600KZT",
         stock: "● В НАЛИЧИЙ",
+        category: "КОМБИНЕЗОНЫ",
         img: "/images/kompl/komp19.jpeg",
         size: "Размеры: 68 см (3-6 мес), 74 см (6-9 мес), 80 см (9-12 мес)",
       },
@@ -1334,6 +1462,7 @@ const database = [
         price: "4.200KZT",
         priceBottom: " 4.800KZT",
         stock: "● В НАЛИЧИЙ",
+        category: "КОМБИНЕЗОНЫ",
         img: "/images/kompl/komp20.jpeg",
         size: "Размеры: 74 см (6-9 мес), 80 см (9-12 мес), 86 см (12-18 мес)",
       },
@@ -1344,6 +1473,7 @@ const database = [
         price: "3.600KZT",
         priceBottom: " 4.200KZT",
         stock: "● В НАЛИЧИЙ",
+        category: "КОМБИНЕЗОНЫ",
         img: "/images/kompl/komp21.jpeg",
         size: "Размеры: 68 см (6-9 мес), 74 см (9-12 мес), 80 см (12-18 мес), 92 см (18-24 мес)",
       },
@@ -1352,6 +1482,7 @@ const database = [
         name: "ЛЕТНЯЯ ДВОЙКА",
         value: 3800,
         price: "3.800KZT",
+        category: "КОМБИНЕЗОНЫ",
         priceBottom: " 4.200KZT",
         stock: "● В НАЛИЧИЙ",
         img: "/images/kompl/komp22.jpeg",
@@ -1361,6 +1492,7 @@ const database = [
         id: 132,
         name: "ДВОЙКА С ПЛАТЬЁМ",
         value: 3800,
+        category: "КОМБИНЕЗОНЫ",
         price: "3.800KZT",
         priceBottom: " 4.200KZT",
         stock: "● В НАЛИЧИЙ",
@@ -1371,6 +1503,7 @@ const database = [
         id: 133,
         name: "ДВОЙКА",
         value: 3500,
+        category: "КОМБИНЕЗОНЫ",
         price: "3.500KZT",
         priceBottom: " 4.200KZT",
         stock: "● В НАЛИЧИЙ",
