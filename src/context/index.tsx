@@ -1,13 +1,20 @@
 import React, { createContext, useState } from "react";
-import { cartItemsProps, catalogCardProps } from "../service/types";
+import { ItemProps, CatalogItemProps } from "../service/types";
+
+type yaNeEbyChtoEto = {
+  map(arg0: (item: CatalogItemProps) => import("react/jsx-runtime").JSX.Element): React.ReactNode;
+  length: any;
+}
 
 type ContextProps = {
   items: any;
   cartItems: any;
-  setItemsFunction: (itemscb: catalogCardProps[]) => void;
+  setItemsFunction: (itemscb: CatalogItemProps[]) => void;
   setCartItemsFromLocalStorage: () => void;
-  addItemCart: (itemcb: cartItemsProps[]) => void;
+  addItemCart: (itemcb: ItemProps[]) => void;
   deleteItemCart: (itemId: number) => void;
+  limitItemsFunc: (moneyLimit: number) => void;
+  searchItemsFunc: (filteredByLimitItems: any, searchInput: string) => yaNeEbyChtoEto;
 };
 export const contextData = createContext({} as ContextProps);
 
@@ -16,10 +23,10 @@ type ContextOverAllProps = {
 };
 
 export function ContextOverAll({ children }: ContextOverAllProps) {
-  const [items, setItems] = useState<catalogCardProps[]>([]);
-  const [cartItems, setCartItems] = useState<cartItemsProps[]>([]);
+  const [items, setItems] = useState<CatalogItemProps[]>([]);
+  const [cartItems, setCartItems] = useState<ItemProps[]>([]);
 
-  function setItemsFunction(itemscb: catalogCardProps[]) {
+  function setItemsFunction(itemscb: any) {
     setItems(itemscb);
   }
 
@@ -35,7 +42,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
     }
   }
 
-  function addItemCart(itemcb: cartItemsProps[]) {
+  function addItemCart(itemcb: ItemProps[]) {
     const cartItemsIds: number[] = [];
     cartItems.map((item) => cartItemsIds.push(item.id));
 
@@ -72,6 +79,20 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
     });
   }
 
+  function limitItemsFunc(moneyLimit: number) {
+    const filtered = items.filter(
+      (item: CatalogItemProps) => item.value <= moneyLimit
+    );
+    return filtered;
+  }
+
+  function searchItemsFunc(filteredByLimitItems: any, searchInput: string) {
+    const filtered = filteredByLimitItems.filter((item: ItemProps) =>
+      item.name.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    return filtered;
+  }
+
   return (
     <contextData.Provider
       value={{
@@ -81,6 +102,8 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
         setCartItemsFromLocalStorage,
         addItemCart,
         deleteItemCart,
+        limitItemsFunc,
+        searchItemsFunc
       }}
     >
       {children}

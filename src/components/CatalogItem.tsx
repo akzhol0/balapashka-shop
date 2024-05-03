@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { catalogCardProps } from "../service/types";
+import { CatalogItemProps } from "../service/types";
 import { contextData } from "../context";
 
 interface ItemProps {
   setClicked: (arg0: boolean) => void;
   name: string;
-  catalogItems: catalogCardProps[];
+  catalogItems: CatalogItemProps[];
 }
 
 function CatalogItem({ name, setClicked, catalogItems }: ItemProps) {

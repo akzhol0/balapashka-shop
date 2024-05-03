@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import CartIcon from "./UI/MyIcons/CartIcon";
-import { catalogCardProps, cartItemsProps } from "../service/types";
+import { CatalogItemProps, ItemProps } from "../service/types";
 import { contextData } from "../context";
 
 interface cardPropsProps {
-  item: catalogCardProps;
+  item: CatalogItemProps;
   setTest: (arg0: boolean) => void;
   test: boolean;
 }

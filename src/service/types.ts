@@ -1,4 +1,4 @@
-export interface catalogCardProps {
+export interface CatalogItemProps {
   id: number;
   value: number;
   name: string;
@@ -9,7 +9,7 @@ export interface catalogCardProps {
   img: string;
 }
 
-export interface cartItemsProps {
+export interface ItemProps {
   name: string;
   id: number;
   value: number;

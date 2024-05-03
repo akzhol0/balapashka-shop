@@ -1,8 +1,8 @@
 import React from "react";
-import { cartItemsProps } from "../service/types";
+import { ItemProps } from "../service/types";
 
 interface cartItemProps {
-  item: cartItemsProps;
+  item: ItemProps;
   deleteItemCart: (arg0: number) => void;
   test: boolean;
   setTest: (arg0: boolean) => void;
@@ -20,7 +20,7 @@ function CartItemComp({ item, deleteItemCart, test, setTest }: cartItemProps) {
           />
         </div>
         <span className="flex flex-col ml-4 leading-[30px]">
-          <p className="w-full h-max-10px overflow-hidden text-[24px]">{item.name}</p>
+          <p className="w-[200%] text-[22px]">{item.name}</p>
           <p className="text-[30px]">{item.value * item.quantity}KZT</p>
           <p className="text-[20px]">Количество: {item.quantity}</p>
         </span>

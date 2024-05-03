@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import BurgerMenu from "./UI/MyIcons/BurgerMenu";
 import CloseBurgerBtn from "./UI/MyIcons/CloseBurgerBtn";
 import CartItemComp from "./CartItemComp";
-import { cartItemsProps } from "../service/types";
+import { ItemProps } from "../service/types";
 import { contextData } from "../context";
 
 interface BurgerMenuCompProps {
   setClicked: (arg0: boolean) => void;
-  cartItems: cartItemsProps[];
+  cartItems: ItemProps[];
   setTest: (arg0: boolean) => void;
   test: boolean;
 }
