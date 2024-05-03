@@ -14,14 +14,10 @@ function PageItems({ setClicked }: PageItemsProps) {
   const [test, setTest] = useState<boolean>(true);
   const [searchInput, setSearchInput] = useState<string>("");
   const [moneyLimit, setMoneyLimit] = useState<number>(50000);
-  const { items, cartItems, limitItemsFunc, searchItemsFunc } =
-    useContext(contextData);
+  const { cartItems, limitItemsFunc, searchItemsFunc } = useContext(contextData);
 
   const filteredByLimitItems = limitItemsFunc(moneyLimit);
-  const filteredBySearchItems = searchItemsFunc(
-    filteredByLimitItems,
-    searchInput
-  );
+  const filteredBySearchItems = searchItemsFunc(filteredByLimitItems, searchInput);
 
   return (
     <div>
@@ -51,7 +47,7 @@ function PageItems({ setClicked }: PageItemsProps) {
                     />
                   ))
                 ) : (
-                  <p className="w-full h-[500px] text-white text-[30px] font-Alumni">
+                  <p className="w-full text-white text-[30px] font-Alumni">
                     Пусто...
                   </p>
                 )}

@@ -26,7 +26,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
   const [items, setItems] = useState<CatalogItemProps[]>([]);
   const [cartItems, setCartItems] = useState<ItemProps[]>([]);
 
-  function setItemsFunction(itemscb: any) {
+  function setItemsFunction(itemscb: CatalogItemProps[]) {
     setItems(itemscb);
   }
 
