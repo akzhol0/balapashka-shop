@@ -11,8 +11,6 @@ import Register from "./auth/Register";
 import { contextData } from "./context/logic";
 
 function App() {
-  const { userIn } = useContext(contextData);
-
   return (
     <ContextOverAll>
       <BrowserRouter>
