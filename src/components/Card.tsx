@@ -30,7 +30,7 @@ function Card({ item, setTest, test }: cardPropsProps) {
 
   return (
     <div className="w-full min-h-[500px] flex flex-col rounded-xl overflow-hidden">
-      <Link to={link}>
+      
         <div className="card-img h-[350px] w-full relative overflow-hidden">
           <span
             onClick={() => objAdder()}
@@ -40,13 +40,14 @@ function Card({ item, setTest, test }: cardPropsProps) {
               <CartIcon />
             </button>
           </span>
+          <Link to={link}>
           <img
             className="w-full h-full object-cover object-center hover:scale-[1.1] duration-[.2s] z-2"
             src={item.img}
             alt="card-logo"
           />
+          </Link>
         </div>
-      </Link>
       <div className="w-full min-h-[150px] px-2 bg-[#222222] flex flex-col text-white font-Alumni cursor-default">
         <p className="text-[30px] text-center leading-15">{item.name}</p>
         <div className="flex justify-around">

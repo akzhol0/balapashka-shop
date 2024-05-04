@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import BurgerMenuComp from "./BurgerMenuComp";
+import BurgerMenuComp from "./burger/BurgerMenuComp";
 import { CatalogItemProps } from "../service/types";
 import Card from "./Card";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 import { contextData } from "../context/logic";
 import Options from "./Options";
 

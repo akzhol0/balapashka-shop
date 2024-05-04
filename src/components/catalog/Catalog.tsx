@@ -1,7 +1,7 @@
-import Header from "./Header";
+import Header from "../header/Header";
 import { useContext, useEffect, useState } from "react";
-import { contextData } from "../context/logic";
-import PageItems from "./PageItems";
+import { contextData } from "../../context/logic";
+import PageItems from "../PageItems";
 import CatalogItems from "./CatalogItems";
 
 function Catalog() {

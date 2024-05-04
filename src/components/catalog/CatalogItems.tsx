@@ -1,5 +1,5 @@
 import React from "react";
-import database from "../service/database";
+import database from "../../service/database";
 import CatalogItem from "./CatalogItem";
 
 type CatalogItemsProps = {

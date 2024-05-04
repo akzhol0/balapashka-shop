@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { CatalogItemProps } from "../service/types";
-import Header from "./Header";
-import { contextData } from "../context/logic";
+import { CatalogItemProps } from "../../service/types";
+import Header from "../header/Header";
+import { contextData } from "../../context/logic";
 import { useNavigate } from "react-router-dom";
 
 function SingleItem() {
@@ -39,10 +39,10 @@ function SingleItem() {
             <p></p>
             <p>{item?.size}</p>
             <div
-              className="w-[100px] h-[30px] flex justify-center items-center bg-white cursor-pointer text-black rounded-lg"
+              className="flex justify-center items-center bg-white cursor-pointer text-black rounded-lg mt-4"
               onClick={() => navigate("/catalog")}
             >
-              <p className="px-4 py-2">Назад</p>
+              <p>Назад</p>
             </div>
           </div>
         </div>

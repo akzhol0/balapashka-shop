@@ -3,20 +3,32 @@ import { ItemProps, CatalogItemProps } from "../service/types";
 import database from "../service/database";
 
 type yaNeEbyChtoEto = {
-  map(arg0: (item: CatalogItemProps) => import("react/jsx-runtime").JSX.Element): React.ReactNode;
+  map(
+    arg0: (item: CatalogItemProps) => import("react/jsx-runtime").JSX.Element
+  ): React.ReactNode;
   length: any;
-}
+};
 
 type ContextProps = {
   items: any;
   cartItems: any;
+  userIn: boolean;
+  setUserIn: (arg0: boolean) => void;
   setItemsFunction: (itemscb: CatalogItemProps[]) => void;
   setCartItemsFromLocalStorage: () => void;
   addItemCart: (itemcb: ItemProps[]) => void;
   deleteItemCart: (itemId: number) => void;
   limitItemsFunc: (moneyLimit: number) => void;
-  searchItemsFunc: (filteredByLimitItems: any, searchInput: string) => yaNeEbyChtoEto;
-  getItem: (id: string | undefined, category: string | undefined, setItem: (arg0: CatalogItemProps) => void) => void;
+  searchItemsFunc: (
+    filteredByLimitItems: any,
+    searchInput: string
+  ) => yaNeEbyChtoEto;
+  getItem: (
+    id: string | undefined,
+    category: string | undefined,
+    setItem: (arg0: CatalogItemProps) => void
+  ) => void;
+  getUserInfo: (setUserLogin: (arg0: string) => void) => void;
 };
 export const contextData = createContext({} as ContextProps);
 
@@ -27,13 +39,14 @@ type ContextOverAllProps = {
 export function ContextOverAll({ children }: ContextOverAllProps) {
   const [items, setItems] = useState<CatalogItemProps[]>([]);
   const [cartItems, setCartItems] = useState<ItemProps[]>([]);
+  const [userIn, setUserIn] = useState<boolean>(false);
 
   function setItemsFunction(itemscb: CatalogItemProps[]) {
     setItems(itemscb);
   }
 
   function setCartItemsFromLocalStorage() {
-    for (let i = 1; i <= 135; i++) {
+    for (let i = 1; i <= 136; i++) {
       const storedData = localStorage.getItem(`item${i}`);
       const myObject = storedData ? JSON.parse(storedData) : null;
 
@@ -95,16 +108,31 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
     return filtered;
   }
 
-  function getItem(id: string | undefined, category: string | undefined, setItem: (arg0: CatalogItemProps) => void) {
+  function getItem(
+    id: string | undefined,
+    category: string | undefined,
+    setItem: (arg0: CatalogItemProps) => void
+  ) {
     database.map((item) => {
       if (item.name == category?.toUpperCase()) {
         item.catalogItemsList.map((item) => {
           if (Number(id) === item.id) {
-            setItem(item)
+            setItem(item);
           }
-        })
+        });
       }
-    })
+    });
+  }
+
+  function getUserInfo(setUserLogin: (arg0: string) => void) {
+    const user = localStorage.getItem("user");
+    const userParsed = user ? JSON.parse(user) : null;
+
+    if (userParsed === null) {
+    } else {
+      setUserIn(true);
+      setUserLogin(userParsed.email);
+    }
   }
 
   return (
@@ -112,6 +140,8 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
       value={{
         items,
         cartItems,
+        userIn,
+        setUserIn,
         setItemsFunction,
         setCartItemsFromLocalStorage,
         addItemCart,
@@ -119,6 +149,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
         limitItemsFunc,
         searchItemsFunc,
         getItem,
+        getUserInfo,
       }}
     >
       {children}
