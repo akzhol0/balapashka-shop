@@ -33,12 +33,13 @@ function BurgerMainMenu({
               </p>
             </div>
           ) : (
-            <div
-              className="w-full bg-[#ed820e] rounded-lg text-black flex justify-center 
-                items-center text-2xl font-light me-2"
-            >
-              <Link to="/login">Войти</Link>
-            </div>
+            <Link
+                className="w-full bg-[#ed820e] rounded-lg text-black flex justify-center 
+              items-center text-2xl font-light me-2"
+                to="/login"
+              >
+                <div>Войти</div>
+              </Link>
           )}
         </div>
       </div>

@@ -7,8 +7,8 @@ const firebaseConfig = {
   projectId: "clothes-database-11ee3",
   storageBucket: "clothes-database-11ee3.appspot.com",
   messagingSenderId: "167029126033",
-  appId: "1:167029126033:web:ba2aac96605975241a6030",
+  appId: "1:167029126033:web:ba2aac96605975241a6030"
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
+export const auth = getAuth(app);

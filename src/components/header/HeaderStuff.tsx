@@ -11,11 +11,17 @@ type HeaderStuff = {
   setUserIn: (arg: boolean) => void;
 };
 
-function HeaderStuff({ burger, setBurger, userIn, userLogin, setUserIn }: HeaderStuff) {
+function HeaderStuff({
+  burger,
+  setBurger,
+  userIn,
+  userLogin,
+  setUserIn,
+}: HeaderStuff) {
   const exitAccount = () => {
-    localStorage.removeItem('user')
+    localStorage.removeItem("user");
     setUserIn(false);
-  }
+  };
 
   return (
     <div className="w-full h-[80px] bg-[#18191A] flex justify-center fixed z-20">
@@ -29,20 +35,26 @@ function HeaderStuff({ burger, setBurger, userIn, userLogin, setUserIn }: Header
         <div className="hidden md:flex items-center gap-[5px]">
           <div className="min-w-[120px] h-[40px] flex cursor-pointer">
             {userIn ? (
-              <div className="w-full px-2 bg-[#ed820e] cursor-default rounded-lg text-black flex justify-center 
-              items-center gap-1 text-xl font-light">
+              <div
+                className="w-full px-2 bg-[#ed820e] cursor-default rounded-lg text-black flex justify-center 
+              items-center gap-1 text-xl font-light"
+              >
                 <p>{userLogin}</p>
-                <p className="bg-black text-white px-2 rounded-lg cursor-pointer"
+                <p
+                  className="bg-black text-white px-2 rounded-lg cursor-pointer"
                   onClick={() => exitAccount()}
-                >Exit</p>
+                >
+                  Exit
+                </p>
               </div>
             ) : (
-              <div
+              <Link
                 className="w-full bg-[#ed820e] rounded-lg text-black flex justify-center 
-                items-center text-2xl font-light me-2"
+              items-center text-2xl font-light me-2"
+                to="/login"
               >
-                <Link to="/login">Войти</Link>
-              </div>
+                <div>Войти</div>
+              </Link>
             )}
           </div>
           <p className="text-3xl font-extrabold hidden lg:flex cursor-default">
@@ -72,7 +84,11 @@ function HeaderStuff({ burger, setBurger, userIn, userLogin, setUserIn }: Header
         }
       >
         <div className="w-[350px] h-screen bg-[#18191a] flex z-10">
-          <BurgerMainMenu exitAccount={exitAccount} userIn={userIn} userLogin={userLogin} />
+          <BurgerMainMenu
+            exitAccount={exitAccount}
+            userIn={userIn}
+            userLogin={userLogin}
+          />
         </div>
       </div>
     </div>

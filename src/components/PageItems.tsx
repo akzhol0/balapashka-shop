@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import BurgerMenuComp from "./burger/BurgerMenuComp";
-import { CatalogItemProps } from "../service/types";
+import { CatalogItemProps, ItemProps } from "../service/types";
 import Card from "./Card";
 import Footer from "./footer/Footer";
 import { contextData } from "../context/logic";
@@ -14,10 +14,13 @@ function PageItems({ setClicked }: PageItemsProps) {
   const [test, setTest] = useState<boolean>(true);
   const [searchInput, setSearchInput] = useState<string>("");
   const [moneyLimit, setMoneyLimit] = useState<number>(50000);
-  const { cartItems, limitItemsFunc, searchItemsFunc } = useContext(contextData);
+  const [priceFilter, setPriceFilter] = useState<string>("");
+  const { cartItems, limitItemsFunc, searchItemsFunc, filteredBySort } =
+    useContext(contextData);
 
   const filteredByLimitItems = limitItemsFunc(moneyLimit);
   const filteredBySearchItems = searchItemsFunc(filteredByLimitItems, searchInput);
+  filteredBySort(priceFilter, filteredBySearchItems);
 
   return (
     <div>
@@ -35,6 +38,7 @@ function PageItems({ setClicked }: PageItemsProps) {
                 searchInput={searchInput}
                 setSearchInput={setSearchInput}
                 setMoneyLimit={setMoneyLimit}
+                setPriceFilter={setPriceFilter}
               />
               <div className="too-long">
                 {filteredBySearchItems.length ? (

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import CartIcon from "./UI/MyIcons/CartIcon";
 import { CatalogItemProps, ItemProps } from "../service/types";
 import { contextData } from "../context/logic";
@@ -29,8 +29,7 @@ function Card({ item, setTest, test }: cardPropsProps) {
   const link = `/catalog/${item.category.toLowerCase()}/${item.id}`;
 
   return (
-    <div className="w-full min-h-[500px] flex flex-col rounded-xl overflow-hidden">
-      
+    <div className="w-full max-h-[500px] min-h-[500px] flex flex-col rounded-xl overflow-hidden">
         <div className="card-img h-[350px] w-full relative overflow-hidden">
           <span
             onClick={() => objAdder()}

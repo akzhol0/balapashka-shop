@@ -3,9 +3,8 @@ import { ItemProps, CatalogItemProps } from "../service/types";
 import database from "../service/database";
 
 type yaNeEbyChtoEto = {
-  map(
-    arg0: (item: CatalogItemProps) => import("react/jsx-runtime").JSX.Element
-  ): React.ReactNode;
+  sort: any;
+  map: any;
   length: any;
 };
 
@@ -19,16 +18,10 @@ type ContextProps = {
   addItemCart: (itemcb: ItemProps[]) => void;
   deleteItemCart: (itemId: number) => void;
   limitItemsFunc: (moneyLimit: number) => void;
-  searchItemsFunc: (
-    filteredByLimitItems: any,
-    searchInput: string
-  ) => yaNeEbyChtoEto;
-  getItem: (
-    id: string | undefined,
-    category: string | undefined,
-    setItem: (arg0: CatalogItemProps) => void
-  ) => void;
+  searchItemsFunc: (filteredByLimitItems: any, searchInput: string) => yaNeEbyChtoEto;
+  getItem: (id: string | undefined,category: string | undefined,setItem: (arg0: CatalogItemProps) => void) => void;
   getUserInfo: (setUserLogin: (arg0: string) => void) => void;
+  filteredBySort: (priceFilter: string, filteredBySearchItems: any) => void;
 };
 export const contextData = createContext({} as ContextProps);
 
@@ -135,6 +128,15 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
     }
   }
 
+  function filteredBySort(priceFilter: string, filteredBySearchItems: any) {
+    if (priceFilter === "f-cheap") {
+      filteredBySearchItems.sort((a: any, b: any) => a.value - b.value);
+    } else if (priceFilter === "f-expensive") {
+      filteredBySearchItems.sort((a: any, b: any) => b.value - a.value);
+    } else {
+    }
+  } 
+
   return (
     <contextData.Provider
       value={{
@@ -150,6 +152,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
         searchItemsFunc,
         getItem,
         getUserInfo,
+        filteredBySort,
       }}
     >
       {children}
