@@ -8,11 +8,19 @@ type BurgerMainMenuProps = {
   exitAccount: () => void;
 };
 
-function BurgerMainMenu({ userIn, userLogin, exitAccount }: BurgerMainMenuProps) {
+function BurgerMainMenu({
+  userIn,
+  userLogin,
+  exitAccount,
+}: BurgerMainMenuProps) {
   const { getAccesLocation, userLocationInfo } = useContext(contextData);
   useEffect(() => {
-    getAccesLocation();
+    repeatLocationAccessFunction();
   }, []);
+
+  function repeatLocationAccessFunction() {
+    getAccesLocation();
+  }
 
   return (
     <div className="w-full flex flex-col gap-[5px] text-[#ed802e] items-center font-extrabold font-Alumni">
@@ -64,12 +72,19 @@ function BurgerMainMenu({ userIn, userLogin, exitAccount }: BurgerMainMenuProps)
         </a>
       </div>
       {userLocationInfo[0]?.name ? (
-         <div className="flex flex-col text-lg items-center">
-         <p>Location: {userLocationInfo[0]?.country}</p>
-         <p>City: {userLocationInfo[0]?.name}</p>
-         <p>Город: {userLocationInfo[0]?.local_names.kk}</p>
-       </div>
-      ) : ''}
+        <div className="flex flex-col text-lg items-center">
+          <p>Location: {userLocationInfo[0]?.country}</p>
+          <p>City: {userLocationInfo[0]?.name}</p>
+          <p>Город: {userLocationInfo[0]?.local_names.kk}</p>
+        </div>
+      ) : (
+        <p
+          onClick={() => repeatLocationAccessFunction()}
+          className="text-xl bg-white px-3 font-light rounded-lg text-black cursor-pointer"
+        >
+          Получить расрешение на локацию
+        </p>
+      )}
     </div>
   );
 }

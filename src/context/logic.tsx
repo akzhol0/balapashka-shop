@@ -43,7 +43,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
   const [cartItems, setCartItems] = useState<ItemProps[]>([]);
   const [userIn, setUserIn] = useState<boolean>(false);
   const [userLocationInfo, setUserLocationInfo] = useState<any[]>([]);
-  const apiKey = "c9331b4abdffb79d1c73a4a09bbae486";
+  const apiKey = process.env.REACT_APP_LOCATION_API;
 
   function setItemsFunction(itemscb: CatalogItemProps[]) {
     setItems(itemscb);

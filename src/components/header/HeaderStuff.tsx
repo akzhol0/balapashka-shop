@@ -52,7 +52,7 @@ function HeaderStuff({
                   </p>
                 </div>
                 {userLocationInfo[0]?.name ? (
-                  <div className="flex gap-1">
+                  <div className="flex justify-center gap-2">
                     <p>Location: {userLocationInfo[0]?.country}</p>
                     <p>City: {userLocationInfo[0]?.name}</p>
                   </div>
@@ -74,7 +74,7 @@ function HeaderStuff({
                     <p>City: {userLocationInfo[0]?.name}</p>
                   </div>
                 ) : (
-                  ""
+                  ''
                 )}
               </div>
             )}
