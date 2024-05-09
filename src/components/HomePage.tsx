@@ -11,7 +11,7 @@ function HomePage() {
 
   return (
     <div>
-      <Header backgroundOnOff={false}/>
+      <Header backgroundOnOff={false} />
       <main className="w-full bg-[#1b1b1b]">
         <div
           className="font-Alumni cursor-default sm:text-4xl text-2xl w-full h-[700px] bg-no-repeat bg-cover flex 

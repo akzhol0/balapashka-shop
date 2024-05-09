@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { contextData } from "../../context/logic";
 
 type BurgerMainMenuProps = {
   userLogin: string;
@@ -7,11 +8,12 @@ type BurgerMainMenuProps = {
   exitAccount: () => void;
 };
 
-function BurgerMainMenu({
-  userIn,
-  userLogin,
-  exitAccount,
-}: BurgerMainMenuProps) {
+function BurgerMainMenu({ userIn, userLogin, exitAccount }: BurgerMainMenuProps) {
+  const { getAccesLocation, userLocationInfo } = useContext(contextData);
+  useEffect(() => {
+    getAccesLocation();
+  }, []);
+
   return (
     <div className="w-full flex flex-col gap-[5px] text-[#ed802e] items-center font-extrabold font-Alumni">
       <div className="min-w-[90px] h-[34px] flex cursor-pointer">
@@ -34,12 +36,12 @@ function BurgerMainMenu({
             </div>
           ) : (
             <Link
-                className="w-full bg-[#ed820e] rounded-lg text-black flex justify-center 
+              className="w-full bg-[#ed820e] rounded-lg text-black flex justify-center 
               items-center text-2xl font-light me-2"
-                to="/login"
-              >
-                <div>Войти</div>
-              </Link>
+              to="/login"
+            >
+              <div>Войти</div>
+            </Link>
           )}
         </div>
       </div>
@@ -61,6 +63,13 @@ function BurgerMainMenu({
           </div>
         </a>
       </div>
+      {userLocationInfo[0]?.name ? (
+         <div className="flex flex-col text-lg items-center">
+         <p>Location: {userLocationInfo[0]?.country}</p>
+         <p>City: {userLocationInfo[0]?.name}</p>
+         <p>Город: {userLocationInfo[0]?.local_names.kk}</p>
+       </div>
+      ) : ''}
     </div>
   );
 }

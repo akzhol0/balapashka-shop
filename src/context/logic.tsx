@@ -12,16 +12,25 @@ type ContextProps = {
   items: any;
   cartItems: any;
   userIn: boolean;
+  userLocationInfo: any[];
   setUserIn: (arg0: boolean) => void;
   setItemsFunction: (itemscb: CatalogItemProps[]) => void;
   setCartItemsFromLocalStorage: () => void;
   addItemCart: (itemcb: ItemProps[]) => void;
   deleteItemCart: (itemId: number) => void;
   limitItemsFunc: (moneyLimit: number) => void;
-  searchItemsFunc: (filteredByLimitItems: any, searchInput: string) => yaNeEbyChtoEto;
-  getItem: (id: string | undefined,category: string | undefined,setItem: (arg0: CatalogItemProps) => void) => void;
+  searchItemsFunc: (
+    filteredByLimitItems: any,
+    searchInput: string
+  ) => yaNeEbyChtoEto;
+  getItem: (
+    id: string | undefined,
+    category: string | undefined,
+    setItem: (arg0: CatalogItemProps) => void
+  ) => void;
   getUserInfo: (setUserLogin: (arg0: string) => void) => void;
   filteredBySort: (priceFilter: string, filteredBySearchItems: any) => void;
+  getAccesLocation: () => void;
 };
 export const contextData = createContext({} as ContextProps);
 
@@ -33,6 +42,8 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
   const [items, setItems] = useState<CatalogItemProps[]>([]);
   const [cartItems, setCartItems] = useState<ItemProps[]>([]);
   const [userIn, setUserIn] = useState<boolean>(false);
+  const [userLocationInfo, setUserLocationInfo] = useState<any[]>([]);
+  const apiKey = "c9331b4abdffb79d1c73a4a09bbae486";
 
   function setItemsFunction(itemscb: CatalogItemProps[]) {
     setItems(itemscb);
@@ -101,6 +112,32 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
     return filtered;
   }
 
+  function getAccesLocation() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+
+          getLocation(lat, lng);
+        },
+        (error) => {}
+      );
+    } else {
+    }
+  }
+
+  async function getLocation(lat: number, lng: number) {
+    await fetch(
+      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lng}&appid=${apiKey}`
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        setUserLocationInfo(json);
+      })
+      .catch((e) => console.log(e));
+  }
+
   function getItem(
     id: string | undefined,
     category: string | undefined,
@@ -135,7 +172,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
       filteredBySearchItems.sort((a: any, b: any) => b.value - a.value);
     } else {
     }
-  } 
+  }
 
   return (
     <contextData.Provider
@@ -143,6 +180,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
         items,
         cartItems,
         userIn,
+        userLocationInfo,
         setUserIn,
         setItemsFunction,
         setCartItemsFromLocalStorage,
@@ -153,6 +191,7 @@ export function ContextOverAll({ children }: ContextOverAllProps) {
         getItem,
         getUserInfo,
         filteredBySort,
+        getAccesLocation,
       }}
     >
       {children}
