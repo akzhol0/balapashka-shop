@@ -1,35 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
-body, html {
-    background: #1b1b1b;
-}
+// body, html {
+//     background: #1b1b1b;
+// }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
+// ::-webkit-scrollbar {
+//     width: 10px;
+// }
 
-::-webkit-scrollbar-track {
-    background: #232323;
-}
+// ::-webkit-scrollbar-track {
+//     background: #232323;
+// }
 
-::-webkit-scrollbar-thumb {
-    background: #ED820E;
-}
+// ::-webkit-scrollbar-thumb {
+//     background: #ED820E;
+// }
 
-@layer components {
-    .img {
-        @apply w-[400px] h-[600px] bg-no-repeat bg-cover bg-center rounded-[30px] hover:scale-[1.05] transition-[0.8s];
-    }
-    .burger {
-        @apply w-[350px] h-dvh bg-[#ff994b] fixed top-0 z-10 duration-[.4s];
-    }
-    .too-long {
-        @apply w-[100%] min-h-[500px] xl:w-[90%] 2xl:w-[80%] px-5 xl:px-0 mt-5 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center
-    }
-  }
+// @layer components {
+//     .img {
+//         @apply w-[400px] h-[600px] bg-no-repeat bg-cover bg-center rounded-[30px] hover:scale-[1.05] transition-[0.8s];
+//     }
+//     .burger {
+//         @apply w-[350px] h-dvh bg-[#ff994b] fixed top-0 z-10 duration-[.4s];
+//     }
+//     .too-long {
+//         @apply w-[100%] min-h-[500px] xl:w-[90%] 2xl:w-[80%] px-5 xl:px-0 mt-5 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center
+//     }
+//   }
