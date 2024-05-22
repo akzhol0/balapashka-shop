@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MainPageCollectionProps } from "../service/types";
+import { MainPageCollectionProps } from "../service/types"; 
 
 function MainPageCollection({
   sizeFrom,

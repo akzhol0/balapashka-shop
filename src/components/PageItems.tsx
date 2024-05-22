@@ -40,7 +40,7 @@ function PageItems({ setClicked }: PageItemsProps) {
                 setMoneyLimit={setMoneyLimit}
                 setPriceFilter={setPriceFilter}
               />
-              <div className="too-long">
+              <div className="w-[100%] min-h-[500px] xl:w-[90%] 2xl:w-[80%] px-5 xl:px-0 mt-5 mb-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-y-10 gap-x-8 place-items-center">
                 {filteredBySearchItems.length ? (
                   filteredBySearchItems.map((item: CatalogItemProps) => (
                     <Card

@@ -40,8 +40,8 @@ function BurgerMenuComp({
       <div
         className={
           burgerMenu
-            ? "burger left-0 z-20 overflow-y-scroll"
-            : "burger left-[-400px] z-20 overflow-y-scroll"
+            ? "w-[350px] h-dvh bg-[#ff994b] fixed top-0 duration-[.4s] left-0 z-20 overflow-y-scroll"
+            : "w-[350px] h-dvh bg-[#ff994b] fixed top-0 duration-[.4s] left-[-400px] z-20 overflow-y-scroll"
         }
       >
         <div className="w-full flex justify-center">

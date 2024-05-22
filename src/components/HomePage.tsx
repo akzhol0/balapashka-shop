@@ -27,9 +27,9 @@ function HomePage() {
         <MyLine>ОБРАЗЫ</MyLine>
         <div className="w-full flex justify-center items-center">
           <div className="w-[100%] xl:w-[100%] grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 place-items-center">
-            <div className="hidden w-[300px] h-[400px] lg:w-[400px] lg:h-[600px] md:block img bg-[url('./imagesBg/img1.jpeg')]"></div>
-            <div className="hidden w-[300px] h-[400px] lg:w-[400px] lg:h-[600px] xl:flex img bg-[url('./imagesBg/img2.jpeg')]"></div>
-            <div className="w-[300px] h-[400px] lg:w-[400px] lg:h-[600px] img bg-[url('./imagesBg/img3.jpeg')]"></div>
+            <div className="hidden w-[300px] h-[400px] lg:w-[400px] lg:h-[600px] md:block bg-no-repeat bg-cover bg-center rounded-[30px] hover:scale-[1.05] transition-[0.8s] bg-[url('./imagesBg/img1.jpeg')]"></div>
+            <div className="hidden w-[300px] h-[400px] lg:w-[400px] lg:h-[600px] xl:flex bg-no-repeat bg-cover bg-center rounded-[30px] hover:scale-[1.05] transition-[0.8s] bg-[url('./imagesBg/img2.jpeg')]"></div>
+            <div className="w-[300px] h-[400px] lg:w-[400px] lg:h-[600px] bg-no-repeat bg-cover bg-center rounded-[30px] hover:scale-[1.05] transition-[0.8s] bg-[url('./imagesBg/img3.jpeg')]"></div>
           </div>
         </div>
         <MyLine>В&nbsp;НАЛИЧИЙ</MyLine>
